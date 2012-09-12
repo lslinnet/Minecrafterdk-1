@@ -1,0 +1,9 @@
+parameters:
+    database_host: localhost
+    database_user: root
+    database_password: ~
+    database_driver: pdo_mysql
+    database_port: ~
+    database_name: minecrafterdk_%kernel.environment%
+    secret: someverysecret
+    locale: da

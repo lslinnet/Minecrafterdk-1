@@ -1,56 +1,39 @@
-#Minecrafter.dk
+Minecrafter.dk
+==============
 
 This is Minecrafter.dk's website, writen in Symfony 2.1.0-RC1
 
-If your wonna help out all the views have a little todo list at the bottom
+If you want to help out there is a small to do list at the buttom of this page.
 
-####Setup:
-===
-* Get and install [Symfony](http://symfony.com/download) (2.1.*)
-* Clone this repo to '/src'
-* Add this code to '/app/AppKernel.php':
+Setup
+-----
 
-```
-new Minecrafter\SiteBundle\MinecrafterdkSiteBundle(),
-```
+Dependencies management is done with [Composer](http://getcomposer.org). So if you do not
+already use it. You can install it with the following command.
 
-* Add this code to '/app/config/routing.php':
+    curl -s https://getcomposer.org/installer | php
 
-```
-_root:
-    resource: "@MinecrafterdkSiteBundle/Controller/SiteController.php"
-    prefix:   /
-    type:     annotation
-```
+You now have access to composer and can run it with `php composer.phar`. For more advanced installiation
+steps check the official documentation.
 
-* Run this command in the terminal:
+Clone this repository with git and install composer dependencies and you are good to go.
 
-```
-php app/console assets:install --symlink --relative web
-```
-* Now go visit the site, and start coding!
+    git clone https://github.com/Minecrafterdk/Minecrafterdk
+    cd Minecrafterdk
+    php composer.phar install
 
-===
+Edit your information about the database etc in `app/config/parameters.yml`. If that file does not exists
+you should copy `app/config/parameters.yml.dist`.
 
-####Install Symfony 2 with Composer:
+If this is the first install you should proberly create the database and install some assets.
 
-Run this in your terminal:
+    php app/console doctrine:database:create
+    php app/console doctrine:schema:create
+    php app/console assets:install --symlink web
 
-```
-curl -s https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-```
+To see the site live you can use the built in development server.
 
-Cd to the folder you wish to install Symfony and run this in the terminal:
+    cd Minecrafterdk
+    php app/console server:start
 
-```
-composer create-project symfony/framework-standard-edition minecrafter v2.1.1
-```
-
-Package site: http://packagist.org/packages/symfony/framework-standard-edition
-
-For updating the Symfony packages you can now run:
-
-```
-composer update
-```
+It will output the address and port where it is running. Have fun!
