@@ -10,7 +10,7 @@ use Minecrafterdk\SiteBundle\Entity\User;
 use Minecrafterdk\SiteBundle\Form;
 
 class SiteController extends Controller
-{	
+{   
     /**
      * @Route("")
      */
