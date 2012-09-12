@@ -2,6 +2,8 @@
 
 This is Minecrafter.dk's website, writen in Symfony 2.1.0-RC1
 
+If your wonna help out all the views have a little todo list at the bottom
+
 ####Setup:
 ===
 * Get and install [Symfony](http://symfony.com/download) (2.1.*)
@@ -30,7 +32,7 @@ php app/console assets:install --symlink --relative web
 
 ===
 
-####Install Symfony 2 via Composer
+####Install Symfony 2 with Composer:
 
 Run this in your terminal:
 
