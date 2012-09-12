@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Minecrafter.dk{% endblock %}</title>
+        {% block stylesheets %}
+        <link href="{{ asset('bundles/minecrafterdksite/font/minecraft_regular/stylesheet.css') }}" type="text/css" rel="stylesheet" />
+        <link href="{{ asset('bundles/minecrafterdksite/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
+        <link href="{{ asset('bundles/minecrafterdksite/css/minecrafter.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <div id="main-container" class="container">
+            <div id="edge-top"></div>
+            <div id="edge-left"></div>
+            <div id="main-header">
+                <h1><a href="{{ path('minecrafterdk_site_site_home') }}">Minecrafter.dk</a></h1>
+                <!--<ul class="nav nav-pills pull-left">
+                    <li class="active"><a href="#">Forsiden</a></li>
+                    <li><a href="#">Youtube Kanaler</a></li>
+                    <li><a href="#">Guider</a></li>
+                    <li><a href="#">Servere</a></li>
+                    <li><a href="#">Wiki</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Billeder</a></li>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Mods</li>
+                    <li><a href="#">Skins</li>
+                    <li><a href="#">Sandkassen</li>
+                    <li><a href="#">Om</li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>-->
+                <ul class="nav nav-pills pull-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Minecrafter Profil <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Login</a></li>
+                            <li><a href="{{ path('minecrafterdk_site_site_signup') }}">Opret profil</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {% block body %}{% endblock %}
+            <div id="edge-right"></div>
+        </div>
+        {% block javascripts %}
+        <script src="{{ asset('bundles/minecrafterdksite/js/jquery-1.8.0.min.js') }}"></script>
+        <script src="{{ asset('bundles/minecrafterdksite/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/minecrafterdksite/js/minecrafter.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>

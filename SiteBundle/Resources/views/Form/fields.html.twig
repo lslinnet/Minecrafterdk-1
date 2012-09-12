@@ -1,0 +1,26 @@
+{% block field_row %}
+<div class="control-group">
+    {{ form_label(form, null, {'label_attr': {'class': 'control-label'} }) }}
+    {{ form_errors(form) }}
+    <div class="controls">
+        {{ form_widget(form, {'attr': {'class': 'input-xlarge'} }) }}
+        {% if help is defined %}
+            <p class="help-block">{{ help }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock field_row %}
+
+
+{% block textarea_widget %}
+    <textarea rows="10" {{ block('widget_attributes') }}>{{ value }}</textarea>
+{% endblock textarea_widget %}
+
+{% block checkbox_widget %}
+    <label class="checkbox">
+        <input type="checkbox" {{ block('widget_attributes') }}>
+        {% if after is defined %}
+            {{ after }}
+        {% endif %}
+    </label>
+{% endblock checkbox_widget %}

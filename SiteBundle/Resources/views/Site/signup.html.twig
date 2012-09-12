@@ -1,0 +1,25 @@
+{% extends 'MinecrafterdkSiteBundle:Site:base.html.twig' %}
+
+{% block body %}
+<form class="form-horizontal">
+    <fieldset>
+        {% form_theme signupForm 'MinecrafterdkSiteBundle:Form:fields.html.twig' %} 
+        {{ form_row(signupForm.mail, { 'label' : 'Mail' }) }}
+        {{ form_row(signupForm.minecraft_nick, { 'label' : 'Minecraft Brugernavn', 'help' : 'Der tages forbehold for store og små bogstaver' }) }}
+        {{ form_row(signupForm.password.first, { 'label' : 'Adgangskode' }) }}
+        {{ form_row(signupForm.password.second, { 'label' : 'Gentag Adgangskode' }) }}
+        {{ form_row(signupForm.accept, { 'label' : 'Overensstemmelse', 'after' : 'Jeg har læst og acceptere Minecrafter.dk\'s regler og overensstemmelser' }) }}
+        {{ form_widget(signupForm) }}
+        <div class="form-actions">
+            <button type="submit" class="btn btn-inverse">Opret bruger</button>
+        </div>
+    </fieldset>
+</form>
+
+<!-- thoughts and missing things -->
+<div class="alert alert-info">
+    En eller anden form for oprettelse illutration/billede til højre for formen<br>
+    Link til Overenstemmelserne (popup?)
+</div>
+
+{% endblock %}

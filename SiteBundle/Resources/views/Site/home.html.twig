@@ -1,0 +1,72 @@
+{% extends 'MinecrafterdkSiteBundle:Site:base.html.twig' %}
+
+{% block body %}
+<section>
+    <div class="row">
+        <div class="span8 news">
+            <img src="http://placehold.it/260x150" alt="" class="img-rounded">
+            <h2><a href="{{ path('minecrafterdk_site_site_home') }}">Nyhed Nyhed Nyhed!</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sagittis justo ut mollis. Maecenas condimentum consectetur ultricies. Quisque suscipit velit eget mi tincidunt quis ultricies nulla tristique. Fusce pretium ipsum nec odio aliquet ac volutpat ipsum lobortis. In hac habitasse platea dictumst.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-facebook.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_home') }}">facebook</a></h2>
+            <p>Facebook feed!</p>
+        </div>
+    </div>
+</section>
+<hr class="soften">
+<section>
+    <div class="row">
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-youtube.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_youtube') }}">YouTube Kanaler</a></h2>
+            <p>En liste over de bedste danske Minecraft kanaler på YouTube.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-guides.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_guides') }}">Guider</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sagittis justo ut mollis. Maecenas condimentum consectetur ultricies. </p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-server.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_servers') }}">Servere</a></h2>
+            <p>Vi godkender kun 100% danske servere til at stå på denne liste og vi tillader kun en stemme per bruger, hvilket i vores øjne giver en mere præcis oversigt over hvilke servere der er de bedste.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-wiki.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_wiki') }}">Wiki</a></h2>
+            <p>Finder du altid dig selv søge fakta om Minecraft, så er denne side noget for dig.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-forum.png') }}">
+            <h2><a href="#">Forum</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sagittis justo ut mollis. Maecenas condimentum consectetur ultricies. </p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-pictures.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_pictures') }}">Billeder</a></h2>
+            <p>Fusce pretium ipsum nec odio aliquet ac volutpat ipsum lobortis. In hac habitasse platea dictumst. Cras feugiat aliquam orci, at ultrices nibh tincidunt vitae. Integer congue feugiat vulputate.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-mods.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_mods') }}">Mods</a></h2>
+            <p>Fusce pretium ipsum nec odio aliquet ac volutpat ipsum lobortis. In hac habitasse platea dictumst. Cras feugiat aliquam orci, at ultrices nibh tincidunt vitae. Integer congue feugiat vulputate.</p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-skins.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_skins') }}">Skins</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sagittis justo ut mollis. Maecenas condimentum consectetur ultricies. </p>
+        </div>
+        <div class="span4">
+            <img class="bs-icon" src="{{ asset('bundles/minecrafterdksite/img/i-sandkassen.png') }}">
+            <h2><a href="{{ path('minecrafterdk_site_site_sandkassen') }}">Sandkassen</a></h2>
+            <p>Fusce pretium ipsum nec odio aliquet ac volutpat ipsum lobortis. In hac habitasse platea dictumst. Cras feugiat aliquam orci, at ultrices nibh tincidunt vitae. Integer congue feugiat vulputate.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
