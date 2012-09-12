@@ -4,7 +4,7 @@ This is Minecrafter.dk's website, writen in Symfony 2.1.0-RC1
 
 ####Setup:
 ===
-* Get and install [Symfony](http://symfony.com/download) (2.1)
+* Get and install [Symfony](http://symfony.com/download) (2.1.*)
 * Clone this repo to '/src'
 * Add this code to '/app/AppKernel.php':
 
@@ -27,3 +27,28 @@ _root:
 php app/console assets:install --symlink --relative web
 ```
 * Now go visit the site, and start coding!
+
+===
+
+####Install Symfony 2 via Composer
+
+Run this in your terminal:
+
+```
+curl -s https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+```
+
+Cd to the folder you wish to install Symfony and run this in the terminal:
+
+```
+composer create-project symfony/framework-standard-edition minecrafter v2.1.1
+```
+
+Package site: http://packagist.org/packages/symfony/framework-standard-edition
+
+For updating the Symfony packages you can now run:
+
+```
+composer update
+```
