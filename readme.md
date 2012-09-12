@@ -22,6 +22,15 @@ Clone this repository with git and install composer dependencies and you are goo
     cd Minecrafterdk
     php composer.phar install
 
+Edit your information about the database etc in `app/config/parameters.yml`. If that file does not exists
+you should copy `app/config/parameters.yml.dist`.
+
+If this is the first install you should proberly create the database and install some assets.
+
+    php app/console doctrine:database:create
+    php app/console doctrine:schema:create
+    php app/console assets:install --symlink web
+
 To see the site live you can use the built in development server.
 
     cd Minecrafterdk
