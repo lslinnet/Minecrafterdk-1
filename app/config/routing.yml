@@ -6,3 +6,7 @@
 _root:
     resource: "@MinecrafterdkSiteBundle/Controller/SiteController.php"
     type:     annotation
+
+servers:
+    pattern:  /servers
+    defaults: { _controller: MinecrafterdkSiteBundle:Servers:list }

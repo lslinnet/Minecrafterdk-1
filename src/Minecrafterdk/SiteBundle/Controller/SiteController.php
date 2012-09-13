@@ -48,14 +48,6 @@ class SiteController extends Controller
     }
     
     /**
-     * @Route("servere")
-     */
-    public function serversAction()
-    {          
-        return $this->render('MinecrafterdkSiteBundle:Site:servers.html.twig', array());
-    }
-    
-    /**
      * @Route("wiki")
      */
     public function wikiAction()
