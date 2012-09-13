@@ -3,6 +3,7 @@ namespace Minecrafterdk\SiteBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Validator\Constraints;
 
 class SignupForm extends AbstractType
 {
@@ -10,8 +11,15 @@ class SignupForm extends AbstractType
     {
         $builder->add('mail', 'text');
         $builder->add('minecraft_nick', 'text');
-        $builder->add('password', 'repeated');
-        $builder->add('accept', 'checkbox');
+        $builder->add('password', 'repeated', array(
+            'type' => 'password',
+        ));
+        $builder->add('accept', 'checkbox', array(
+            'mapped' => false,
+            'constraints' => array(
+                new Constraints\True(),
+            ),
+        ));
     }
     
     public function getName() 
