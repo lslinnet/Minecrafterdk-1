@@ -3,9 +3,10 @@ namespace Minecrafterdk\SiteBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Validator\Constraints;
 
-class SignupForm extends AbstractType
+class UserForm extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -21,9 +22,16 @@ class SignupForm extends AbstractType
             ),
         ));
     }
-    
+
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
+    {
+        $resolver->setDefaults(array(
+            'data_class' => 'Minecrafterdk\SiteBundle\Entity\User',
+        ));
+    }
+
     public function getName() 
     {
-        return 'signup';
+        return 'minecrafterdk_site_user';
     }
 }

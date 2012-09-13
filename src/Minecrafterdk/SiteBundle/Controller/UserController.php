@@ -3,15 +3,13 @@
 namespace Minecrafterdk\SiteBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
-
-use Minecrafterdk\SiteBundle\Entity\User;
-use Minecrafterdk\SiteBundle\Form;
+use Minecrafterdk\SiteBundle\Form\UserForm;
 
 class UserController extends Controller
 {
     public function newAction(Request $request)
     {
-        $form = $this->createForm(new Form\SignupForm, new User());
+        $form = $this->createForm(new UserForm);
 
         if ($request->isMethod('post') && $form->bind($request) && $form->isValid()) {
             // the form is valid otherwise it will show errors
