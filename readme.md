@@ -16,16 +16,15 @@ already use it. You can install it with the following command.
 You now have access to composer and can run it with `php composer.phar`. For more advanced installiation
 steps check the official documentation.
 
-alternatively you can chose to install composer globally with the following commands.
+You can make composer globally with the following command. (Only working on linux or osx)
 
-    curl -s https://getcomposer.org/installer | php
     sudo mv composer.phar /usr/local/bin/composer
 
 Clone this repository with git and install composer dependencies and you are good to go.
 
     git clone https://github.com/Minecrafterdk/Minecrafterdk
     cd Minecrafterdk
-    php composer.phar install
+    php composer.phar install    /    composer install (if you did the globel thing)
 
 Edit your information about the database etc in `app/config/parameters.yml`. If that file does not exists
 you should copy `app/config/parameters.yml.dist`.
