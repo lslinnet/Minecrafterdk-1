@@ -1,0 +1,11 @@
+_user:
+    resource: "@MinecrafterdkSiteBundle/Controller/UserController.php"
+    type: annotation
+
+_server:
+    resource: "@MinecrafterdkSiteBundle/Controller/ServerController.php"
+    type: annotation
+
+_site:
+    resource: "@MinecrafterdkSiteBundle/Controller/SiteController.php"
+    type: annotation

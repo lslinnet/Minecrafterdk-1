@@ -4,7 +4,7 @@ namespace Minecrafterdk\SiteBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\Security\Core\SecurityContext;
+use Symfony\Component\HttpFoundation\Request;
 
 use Minecrafterdk\SiteBundle\Entity\User;
 use Minecrafterdk\SiteBundle\Form;
@@ -17,18 +17,6 @@ class SiteController extends Controller
     public function homeAction()
     {          
         return $this->render('MinecrafterdkSiteBundle:Site:home.html.twig', array());
-    }
-    
-    /**
-     * @Route("opret_bruger")
-     */
-    public function signupAction()
-    {          
-        $signupForm = $this->createForm(new Form\SignupForm, new User());
-        
-        return $this->render('MinecrafterdkSiteBundle:Site:signup.html.twig', array(
-            'signupForm' => $signupForm->createView()
-        ));
     }
     
     /**

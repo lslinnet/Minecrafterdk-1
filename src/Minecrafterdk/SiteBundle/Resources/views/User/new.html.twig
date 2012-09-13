@@ -1,0 +1,29 @@
+{% extends 'MinecrafterdkSiteBundle:Site:base.html.twig' %}
+
+{% set formView = form.createView %}
+
+{% block body %}
+
+    <form action="{{ path('minecrafterdk_site_user_new') }}" class="form-horizontal" novalidate="novalidate" method="post">
+        <fieldset>
+            {{ form_row(formView.mail, { 'label' : 'Mail' }) }}
+            {{ form_row(formView.minecraft_nick, { 'label' : 'Minecraft Brugernavn', 'help' : 'Der tages forbehold for store og små bogstaver' }) }}
+            {{ form_row(formView.password.first, { 'label' : 'Adgangskode' }) }}
+            {{ form_row(formView.password.second, { 'label' : 'Gentag Adgangskode' }) }}
+            {{ form_row(formView.accept, { 'label' : 'Overensstemmelse', 'after' : 'Jeg har læst og acceptere Minecrafter.dk\'s regler og overensstemmelser' }) }}
+
+            {{ form_rest(formView) }}
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-inverse">Opret bruger</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <!-- thoughts and missing things -->
+    <div class="alert alert-info">
+        En eller anden form for oprettelse illutration/billede til højre for formen<br>
+        Link til Overenstemmelserne (popup?)
+    </div>
+
+{% endblock %}

@@ -4,9 +4,4 @@
 #    prefix:   /_internal
 
 _root:
-    resource: "@MinecrafterdkSiteBundle/Controller/SiteController.php"
-    type:     annotation
-
-servers:
-    pattern:  /servers
-    defaults: { _controller: MinecrafterdkSiteBundle:Servers:list }
+    resource: "@MinecrafterdkSiteBundle/Resources/config/routing.yml"
