@@ -2,12 +2,7 @@
 
 namespace Minecrafterdk\SiteBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\Request;
-
-use Minecrafterdk\SiteBundle\Entity\User;
-use Minecrafterdk\SiteBundle\Form;
 
 class SiteController extends Controller
 {   

@@ -1,11 +1,15 @@
-_user:
-    resource: "@MinecrafterdkSiteBundle/Controller/UserController.php"
-    type: annotation
-
-_server:
-    resource: "@MinecrafterdkSiteBundle/Controller/ServerController.php"
-    type: annotation
-
 _site:
     resource: "@MinecrafterdkSiteBundle/Controller/SiteController.php"
     type: annotation
+
+minecrafterdk_site_user_new:
+    pattern: /opret_bruger
+    defaults: { _controller: MinecrafterdkSiteBundle:User:new }
+
+minecrafterdk_site_server_index:
+    pattern: /servere
+    defaults: { _controller: MinecrafterdkSiteBundle:Server:index }
+
+minecrafterdk_site_server_view:
+    pattern: /server/{slug}
+    defaults: { _controller: MinecrafterdkSiteBundle:Server:view }
